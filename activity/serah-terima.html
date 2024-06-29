@@ -33,20 +33,7 @@
     if (typeof table !== 'undefined') {
         table.destroy()
     } else {
-        let table = new DataTable('#datatablesSimple', {
-            layout: {
-                topStart: {
-                    buttons: [
-                        {
-                            text: '+ Tambah',
-                            action: function (e, dt, node, config) {
-
-                            }
-                        }
-                    ]
-                }
-            }
-        });
+        let table = new DataTable('#datatablesSimple');
     }
 </script>
 <!-- <script src="js/datatables-simple-demo.js"></script> -->
