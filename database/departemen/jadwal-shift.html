@@ -1,0 +1,188 @@
+<!-- <style>
+    /* body {
+        font-family: Arial, sans-serif;
+    } */
+
+    #calendar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .shift {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        width: 150px;
+        text-align: center;
+    }
+
+    .shift p {
+        margin: 5px 0;
+    }
+</style> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+
+
+<div class="card">
+    <div class="card-header">
+        <a href="database/departemen.html" class="btn btn-sm btn-danger navigation float-start">< Kembali</a>
+    </div>
+    <div class="card-body">
+        <div class="mt-3">
+            <div class="container mt-4">
+                <h1>Jadwal Shift Departemen Security 1</h1>
+                <div class="form-group">
+                    <label for="month-picker">Select a Month:</label>
+                    <input type="text" id="month-picker" class="form-control">
+                    <button class="btn btn-primary mt-2">Cari</button>
+                    <button class="btn btn-success mt-2">Print</button>
+                </div>
+                <div class="mt-3">
+                    <h4><b>Juni 2024</b></h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <thead>
+                                <th>tanggal</th>
+                                <th>Shift</th>
+                            </thead>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Pagi</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Pagi</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Pagi</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Libur</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Libur</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Pagi</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Pagi</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Pagi</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Pagi</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Libur</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>Libur</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>Sore</td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>Libur</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>Malam</td>
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td>Libur</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>Pagi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#month-picker').datepicker({
+                format: 'MM yyyy',
+                viewMode: 'months',
+                minViewMode: 'months',
+                autoClose:true
+        });
+    });
+</script>

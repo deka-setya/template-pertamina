@@ -2,45 +2,33 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Departemen
+            Shift
         </div>
         <div class="card-body">
             <table id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>Departemen</th>
-                        <th>Nama Kepala</th>
+                        <th>Periode</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Security 1</td>
-                        <td>Indra S.</td>
+                        <td>Juni 2024</td>
                         <td>
                             <div>
-                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">edit</button>
-                                <a href="database/departemen/jadwal-shift.html" class="btn btn-warning navigation">Jadwal Shift</a>
+                                <a href="database/shift-group/detail.html" class="btn btn-sm btn-primary navigation">Lihat</a>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>Security 2</td>
-                        <td>Panjul M.</td>
+                        <td>Juni 2024</td>
                         <td>
                             <div>
-                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">edit</button>
-                                <a href="database/departemen/jadwal-shift.html" class="btn btn-warning navigation">Jadwal Shift</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Admin</td>
-                        <td>Syarni Indah</td>
-                        <td>
-                            <div>
-                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">edit</button>
-                                <a href="database/departemen/jadwal-shift.html" class="btn btn-warning navigation">Jadwal Shift</a>
+                                <a href="database/shift-group/detail.html" class="btn btn-sm btn-primary navigation">Lihat</a>
                             </div>
                         </td>
                     </tr>
@@ -53,7 +41,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title fs-5" id="formModalLabel">Departemen</h5>
+          <h5 class="modal-title fs-5" id="formModalLabel">Shift</h5>
           <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -61,13 +49,17 @@
         <div class="modal-body">
             <form>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Departemen</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="exampleInputEmail1" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Nama Kepala</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <label for="exampleInputPassword1" class="form-label">Jam Mulai</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1">
                 </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Jam Pulang</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
               </form>
         </div>
         <div class="modal-footer">
