@@ -24,61 +24,16 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mt-3">
-                                <h3 class="text-decoration-underline">Patroli</h3>
-                                <table class="table table-stripes">
-                                    <thead>
-                                        <th>Lokasi</th>
-                                        <th>Kondisi</th>
-                                        <th>Keterangan</th>
-                                        <th>Aksi</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Lokasi 1</td>
-                                            <td>Satisfactory</td>
-                                            <td>-</td>
-                                            <td><button class="btn btn-xs btn-success">Lihat</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lokasi 1</td>
-                                            <td>Satisfactory</td>
-                                            <td>-</td>
-                                            <td><button class="btn btn-xs btn-success">Lihat</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mt-3">
-                                <h3 class="text-decoration-underline">CCTV</h3>
-                                <table class="table table-stripes">
-                                    <thead>
-                                        <th>Lokasi</th>
-                                        <th>Kondisi</th>
-                                        <th>Keterangan</th>
-                                        <th>Aksi</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Lokasi 1</td>
-                                            <td>Satisfactory</td>
-                                            <td>-</td>
-                                            <td><button class="btn btn-xs btn-success">Lihat</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lokasi 1</td>
-                                            <td>Satisfactory</td>
-                                            <td>-</td>
-                                            <td><button class="btn btn-xs btn-success">Lihat</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    <div class="container mt-3">
+                        <a href="activity/serah-terima/view-serah-terima/cctv.html" class="btn btn-success btn-sm nav-review">CCTV</a href="#">
+                        <a href="activity/serah-terima/view-serah-terima/patroli.html" class="btn btn-secondary btn-sm nav-review">Patroli</a href="#">
+                        <a href="#" class="btn btn-secondary btn-sm nav-review">Visitor</a href="#">
+                        <a href="#" class="btn btn-secondary btn-sm nav-review">Keluar/Masuk Personel</a href="#">
+                        <a href="#" class="btn btn-secondary btn-sm nav-review">Gate Pass</a href="#">
+                        <a href="#" class="btn btn-secondary btn-sm nav-review">Case Spesial</a href="#">
+                    </div>
+                    <div id="container-review" class="container mt-3">
+
                     </div>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
@@ -118,3 +73,20 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('body').on('click', '.nav-review', function(e){
+        e.preventDefault()
+        $('.nav-review').each(function(){
+            $(this).removeClass('btn-success')
+            $(this).removeClass('btn-secondary')
+            $(this).addClass('btn-secondary')
+        })
+        $(this).addClass('btn-success')
+        let url = $(this).attr('href');
+        $('#container-review').children().remove();
+        $('#container-review').load(url)
+    })
+
+    $('.nav-review').first().trigger('click')
+</script>
