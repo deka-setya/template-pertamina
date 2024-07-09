@@ -348,6 +348,8 @@ figure {
   width: 500px;
 }
 
+
+
 .login-logo {
   max-width: 300px;
   max-height: 300px;
@@ -4864,7 +4866,7 @@ fieldset:disabled .btn {
   --bs-navbar-active-color: #fff;
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
-  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.048);
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
@@ -12951,36 +12953,36 @@ body {
 }
 
 .sb-sidenav-dark {
-  background-color: #212529;
-  color: rgba(255, 255, 255, 0.5);
+  background-color: #dcdee0;
+  color: #020f1c;
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
-  color: rgba(255, 255, 255, 0.25);
+  color: #020f1c;
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: #020f1c;
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-  color: rgba(255, 255, 255, 0.25);
+  color: #020f1c;
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
-  color: rgba(255, 255, 255, 0.25);
+  color: #020f1c;
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
-  color: #fff;
+  color: #f70505;
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
-  color: #fff;
+  color: #f70505;
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
-  color: #fff;
+  color: #f70505;
 }
 
 .sb-sidenav-dark .sb-sidenav-footer {

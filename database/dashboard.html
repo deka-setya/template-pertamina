@@ -1,0 +1,143 @@
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Area Patroli
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>Latitude/Longitude</th>
+                        <th>Lokasi</th>
+                        <th>RFID</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A91</td>
+                        <td>9.99281, -0.9291</td>
+                        <td>Lokasi 1</td>
+                        <td>78732ahga762hhawg</td>
+                        <td>
+                            <div>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#formModal">edit</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>A81</td>
+                        <td>9.99281, -0.9291</td>
+                        <td>Lokasi 2</td>
+                        <td>78732ahga762hhawg</td>
+                        <td>
+                            <div>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#formModal">edit</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>A71</td>
+                        <td>9.99281, -0.9291</td>
+                        <td>Lokasi 3</td>
+                        <td>78732ahga762hhawg</td>
+                        <td>
+                            <div>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#formModal">edit</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>A811</td>
+                        <td>9.99281, -0.9291</td>
+                        <td>Lokasi 2</td>
+                        <td>78732ahga762hhawg</td>
+                        <td>
+                            <div>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#formModal">edit</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5" id="formModalLabel">Departemen</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Nomor</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Latitude/Longitude</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">RFID</label>
+                        <input type="text" class="form-control" disabled value="78732ahga762hhawg"
+                            id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Kondisi</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // $('#formModal').on('shown.bs.modal', function (e) {
+    //     $(this)
+    //         .find("input,textarea,select")
+    //         .focus()
+    // })
+    $('#formModal').on('hidden.bs.modal', function (e) {
+        $(this)
+            .find("input,textarea,select")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end();
+    })
+    if (typeof table !== 'undefined') {
+        table.destroy()
+    } else {
+        let table = new DataTable('#datatablesSimple', {
+            layout: {
+                topStart: {
+                    buttons: [
+                        {
+                            text: '+ Tambah',
+                            action: function (e, dt, node, config) {
+
+                            }
+                        }
+                    ]
+                }
+            }
+        });
+    }
+</script>
+<!-- <script src="js/datatables-simple-demo.js"></script> -->
